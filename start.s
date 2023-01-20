@@ -27,8 +27,8 @@ times (STAGE_1_OFF - ($ - start) - 2) \
     db      0
 stage_1:
 .enable_tiny_mode:
-    push    cs
-    pop     ds
+    mov     ax, 0
+    mov     ds, ax
 .do_bios_init:
     call    bios_init
     ; We can now use `bios_puts` and `bios_putchar`.
